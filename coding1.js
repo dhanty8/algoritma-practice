@@ -3,18 +3,19 @@ function reverseAlphabet(input) {
   let numbers = "";
 
   for (const char of input) {
-    if (/[a-zA-Z]/.test(char)) {
+    if ((char >= "a" && char <= "z") || (char >= "A" && char <= "Z")) {
       chars += char;
     } else {
       numbers += char;
     }
   }
 
-  const arrChar = chars.split("");
+  let reversedChars = "";
+  for (let i = chars.length - 1; i >= 0; i--) {
+    reversedChars += chars[i];
+  }
 
-  const reverseChar = arrChar.reverse().join("");
-
-  return reverseChar + numbers;
+  return reversedChars + numbers;
 }
 
 const inputString = "NEGIE1";

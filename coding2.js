@@ -4,9 +4,7 @@ function longest(sentence) {
   let longestWord = "";
   let maxLength = 0;
 
-  for (const element of words) {
-    const word = element.replace(/[^\w\s]/g, "");
-
+  for (const word of words) {
     if (word.length > maxLength) {
       longestWord = word;
       maxLength = word.length;

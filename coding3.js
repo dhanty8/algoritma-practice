@@ -1,14 +1,15 @@
-function countWordsInInput(INPUT, QUERY) {
+function countWordsInInput(input, query) {
   const wordCount = {};
 
-  INPUT.forEach((word) => {
+  for (const word of input) {
     wordCount[word] = (wordCount[word] || 0) + 1;
-  });
+  }
 
   const result = [];
-  QUERY.forEach((word) => {
+
+  for (const word of query) {
     result.push(wordCount[word] || 0);
-  });
+  }
 
   return result;
 }
